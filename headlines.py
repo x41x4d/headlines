@@ -64,7 +64,7 @@ def get_weather(query):
     #print(type(parsed))
     #print(parsed)
     if parsed.get("weather"):
-        weather = {"description": str(parsed["weather"][0]["description"]).capitalize(), "temperature": parsed["main"]["temp"],
+        weather = {"description": str(parsed["weather"][0]["description"]).title(), "temperature": parsed["main"]["temp"],
                    "city": parsed["name"], "country": parsed['sys']['country']}
     return weather
 
